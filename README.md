@@ -98,7 +98,5 @@ Myntra faces challenges in:
 - **Tools**: MySQL, Power BI, Streamlit  
 - **Libraries**: XGBoost, scikit-learn, Plotly, pandas, NumPy  
 
----
 
-## 📂 Folder Structure (Recommended)
 
