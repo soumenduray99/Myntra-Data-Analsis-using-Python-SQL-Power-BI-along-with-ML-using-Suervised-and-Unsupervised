@@ -294,7 +294,7 @@ def data_gen(n):
 # STREAMLIT FOR APP BUILDING
 st.set_page_config(layout="wide", page_title="Myntra  Analysis ")
 st.image("myntra.png")
-st.title("Myntra Delivery Partner Prediction Analysis")
+st.title("Myntra Delivery Partner Prediction Analysis and Customer Segmenting using Clustering")
 
     
 tab1,tab2,tab3,tab4,tab5,tab6,tab7,tab8,tab9,tab10,tab11=st.tabs(['Description','Model_Prediction_via_options',
@@ -758,7 +758,7 @@ with tab6:
     
   cl_9a,cl_9b,cl_9c=st.columns([1.4,1,1])
   with cl_9a:
-    cities=df_app.groupby('City')[['Qty','Latitude','Longitude']].agg({'Qty':'sum','Latitude':'mean','Longitude':'mean'  } ).reset_index()
+    cities=df_app3.groupby('City')[['Qty','Latitude','Longitude']].agg({'Qty':'sum','Latitude':'mean','Longitude':'mean'  } ).reset_index()
     fig_ct = px.scatter_mapbox(cities,lat='Latitude', lon='Longitude', text='City',size='Qty', color='City',
                             mapbox_style='open-street-map', 
                             title='Citywise Total Quantity',
